@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default main">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Brand" src="../images/nav/eisys-logo.png">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="<%=menu.home.class%>"><a href="/"><%= menu.home.label %><span class="sr-only">(current)</span></a></li>
+        <li class="<%=menu.know.class%>"><a href="/conocenos"><%= menu.know.label %></a></li>
+        <li class="<%=menu.services.class%>"><a href="/servicios"><%= menu.services.label %></a></li>
+        <li class="<%=menu.contact.class%>"><a href="/contacto"><%= menu.contact.label %></a></li>
+        <li class="visible-xs <%=menu.know_about.class%>"><a href="/conocenos/acerca"><%= menu.know_about.label %></a></li>
+        <li class="visible-xs <%=menu.know_philosophy.class%>"><a href="/conocenos/filosofia"><%= menu.know_philosophy.label %></a></li>
+        <li class="visible-xs <%=menu.know_background.class%>"><a href="/conocenos/trayectoria"><%= menu.know_background.label %></a></li>
+        <li class="visible-xs <%=menu.know_working.class%>"><a href="/conocenos/trabajo"><%= menu.know_working.label  %></a></li>
+        <li class="visible-xs <%=menu.know_allies.class%>"><a href="/conocenos/alianzas"><%= menu.know_allies.label %></a></li>
+        <!--<li class="cont">-->
+  <!--<div>-->
+    <!--<span class="a"></span>-->
+    <!--<span class="b"></span>-->
+  <!--</div>-->
+  <!--<a class="c">texto</a>-->
+  <!--<div>-->
+    <!--<span class="d"></span>-->
+    <!--<span class="e"></span>-->
+  <!--</div>-->
+        <!--</li>-->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

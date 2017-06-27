@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../partials/header.ejs %>
+</head>
+
+<body>
+<% include ../partials/page-header.ejs %>
+<% include ../partials/nav.ejs %>
+<div class="m-t-5-6em contact">
+    <div class="banner contact">
+        <div class="title extra-bold"><%= title %></div>
+        <div class="paragraph text-center"><%- text %></div>
+    </div>
+    <div class="mandatory"><%= mandatory %></div>
+        <form id="form" method="post" action="/contacto/send" enctype="text/plain">
+        <div class="fields text-center">
+            <div class="first col-sm-7">
+                <div class="row">
+                    <div class="col-sm-4 field">
+                        <label class="regular"><%= name %></label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input id="name" name="name" class="regular" type="text" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 field">
+                        <label class="regular"><%= company %></label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input id="company" name="company" class="regular" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 field">
+                        <label class="regular"><%= position %></label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input id="position" name="position" class="regular" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 field">
+                        <label class="regular"><%= phone %></label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input id="phone" name="phone" class="regular" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 field">
+                        <label class="regular"><%= cellphone %></label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input id="cellphone" name="cellphone" class="regular" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 field">
+                        <label class="regular"><%= mail %></label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input id="email" name="email" type="email" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row message col-sm-5">
+                <div class="field">
+                    <label class="regular"><%= comments %></label>
+                </div>
+                <div class="message-area">
+                    <textarea name="comments" required rows="4"></textarea>
+                    <%if (resultMessage) { %>
+                        <%- include(resultMessage) %>
+                    <% }%>
+                </div>
+            </div>
+        </div>
+        <div class="button text-center">
+            <button type="submit" data-loading-text="<i class='fa fa-spinner fa-spin '></i>"
+                    class="btn bold"><%= send %></button>
+        </div>
+    </form>
+</div>
+<% include ../partials/page-footer.ejs %>
+</body>
+
+</html>
